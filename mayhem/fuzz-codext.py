@@ -13,6 +13,10 @@ def TestOneInput(input_bytes):
         fdp = atheris.FuzzedDataProvider(input_bytes)
         data = fdp.ConsumeString(sys.maxsize)
         encoded = codext.encode(data, "base100")
+        decoded = codext.decode(data, "base100")
+
+        if data != decoded:
+            raise Exception("Logic error")
     except UnicodeDecodeError:
         pass
     except ValueError:
