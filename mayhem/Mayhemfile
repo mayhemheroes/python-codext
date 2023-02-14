@@ -1,8 +1,6 @@
 project: python-codext
 target: fuzz-codext
 
-image: ghcr.io/matl4c/fuzz-codext:latest
-
 cmds:
   - cmd: /src/mayhem/fuzz-codext.py
     libfuzzer: true
