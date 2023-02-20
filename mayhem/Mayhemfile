@@ -1,0 +1,6 @@
+project: python-codext
+target: fuzz-codext
+
+cmds:
+  - cmd: /src/mayhem/fuzz-codext.py
+    libfuzzer: true
